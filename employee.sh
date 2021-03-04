@@ -11,3 +11,13 @@ then
 else
 	echo "Employee is Absent"
 fi
+
+
+if [ $isPresent -eq $randomCheck ]
+then
+	empRatePerHrs=20;
+	empHrs=8;
+	salary=$(($empHrs*$empRatePerHrs))
+else
+	salary=0;
+fi
