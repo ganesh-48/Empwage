@@ -80,3 +80,30 @@ do
 		salary=$(($empHrs*$empRatePerHr));
 		totalSalary=$(($totalSalary+$salary));
 done
+
+
+isPartTime=1;
+isFullTime=2;
+maxHrsinMonth=10;
+empRatePerHr=20;
+NumWorkingDays=20;
+totalEmpHr=0;
+totalWorkingDays=0;
+
+while [[ $totalEmpHr -lt $maxHrsinMonth &&
+	 $totalWorkingDays -lt $NumWorkingDay ]]
+do
+	((totalWorkingDays++))
+	empCheck=$((RANDOM%3)) 
+	case $empCheck in
+		$isFullTime)
+			emphr=8;;
+		$isPartTime)
+			empHr=4;;
+		*)
+			empHr=0;;
+	esac
+	totalEmpHr=$(($totalEmpHr*$empHr))
+done
+
+totalSalary=$(($totalEmpHr*$empRatePerHr))
