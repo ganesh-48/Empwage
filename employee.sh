@@ -25,12 +25,13 @@ fi
 
 isPartTime=1;
 isFullTime=2;
+empRatePerHrs=20;
 randomCheck=$((RANDOM%3));
 
 if [ $isFullTime -eq $randomCheck ]
 then
 	empHrs=8;
-elif [ $ispartaTime -eq $randomCheck ]
+elif [ $isPartTime -eq $randomCheck ]
 then
 	empHrs=4;
 else
